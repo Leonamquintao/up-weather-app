@@ -1,0 +1,48 @@
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+.container {
+  margin: 30px 20px 10px 20px;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-element {
+  position: relative;
+}
+
+.search input {
+  height: 32px;
+  width: 350px;
+  border: 1px solid #f0efef;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.search input {
+  text-indent: 2em;
+}
+
+.search .fa-search {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  color: #747070;
+}
+
+.search .fa-times-circle {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  color: #747070;
+}
+
+.search-count p {
+  color:#747070;
+  font-size: 12px;
+  font-style: italic;
+}

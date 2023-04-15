@@ -1,0 +1,66 @@
+.daily-info {
+  display: flex;
+  min-height: 60vh;
+  flex-direction: column;
+  margin: 20px;
+  align-items: center;
+}
+
+.weather-row {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.weather-img {
+  width: 120px;
+  height:  120px;
+  margin-right: 30px;
+}
+
+.weather-info h2 {
+  color:#747070;
+  font-style: italic;
+  text-align: center;
+}
+
+.weather-info h5 {
+  color:#b6b2b2;
+  font-style: italic;
+  margin-top: -20px;
+  text-align: center;
+}
+
+.info-details {
+  min-height: 60vh;
+}
+
+.weather-name {
+  font-size: 16px;
+  color: #747070;
+  font-weight: bold;
+}
+
+.wind-speed {
+  font-size: 12px;
+  color:#b6b2b2;
+  font-style: italic;
+}
+
+.default-info {
+  font-size: 14px;
+  color: #494949;
+}
+
+.web-icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.web-icon {
+  width: 380px;
+  height: 120px;
+  object-fit: fill;
+  border-radius: 20px;
+}

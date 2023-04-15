@@ -1,0 +1,102 @@
+.detail-container {
+  width: 100%;
+  height: 100%;
+}
+
+.loading-text {
+  color: #747070;
+  font-style: italic;
+}
+
+.weather-item {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  height: 82vh;
+  border-radius: 10px;
+  background-color: #FFF;
+  margin: 6px;
+  align-items: center;
+}
+
+.weather-item-name {
+  color: #2b2a2a;
+  margin-bottom: 30px;
+}
+
+.weather-item-icon-container {
+  display: flex;
+  justify-content: center;
+}
+
+.weather-item-img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+.weather-item-info h2 {
+  color:#747070;
+  font-style: italic;
+  text-align: center;
+  font-size: 16px;
+}
+
+.weather-item-info h5 {
+  color:#b6b2b2;
+  font-style: italic;
+  margin-top: -10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.info-item-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  height: 3vh;
+}
+
+.wind-item-speed {
+  font-size: 12px;
+  color:#b6b2b2;
+  font-style: italic;
+  text-align: center;
+}
+
+.air-container {
+  display: flex;
+  height: 3vh;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.air-humidity {
+  width: 20px;
+  height: 20px;
+}
+
+.air-container span {
+  color: #747070;
+  font-size: 12px;
+  margin: 4px;
+}
+
+.item-detailedForecast {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.item-detailedForecast-text {
+  font-size: 12px;
+  color:#747070;
+  text-align: center;
+}
+
+
