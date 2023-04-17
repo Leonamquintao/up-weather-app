@@ -34,7 +34,7 @@ const DailyViewComponent: React.FC<DailyViewComponentProps> = ({ weather }) => {
   }
 
   return (
-    <div className='daily-info'>
+    <div className='daily-info' data-testid="">
       <div className='weather-row'>
         <div className='weather-icon-container'>
           <img

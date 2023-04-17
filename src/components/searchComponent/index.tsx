@@ -6,6 +6,7 @@ interface SearchComponentProps {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onClear: () => void;
   results: any;
+  testId: string;
 }
 
 const SearchComponent: React.FC<SearchComponentProps> = ({
@@ -13,23 +14,25 @@ const SearchComponent: React.FC<SearchComponentProps> = ({
   onChange,
   onClear,
   results,
+  testId = 'search-input',
 }) => {
   return (
-    <div className='container'>
-      <div className='search'>
-        <span className='form-element'>
-          <i className='fa fa-search' />
+    <div className="container" data-testid="search-component">
+      <div className="search">
+        <span className="form-element">
+          <i className="fa fa-search" />
           <input
-            type='text'
+            type="text"
             value={searchTerm}
-            placeholder='Search for places...'
+            placeholder="Search for places..."
             onChange={onChange}
+            data-testid={testId}
           />
-          <i className='fa fa-times-circle' onClick={() => onClear()} />
+          <i className="fa fa-times-circle" onClick={() => onClear()} />
         </span>
 
         {results && searchTerm.length > 3 && (
-          <div className='search-count'>
+          <div className="search-count">
             <p>address Matches: {results.addressMatches.length}</p>
           </div>
         )}

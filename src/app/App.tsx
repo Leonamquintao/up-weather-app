@@ -82,35 +82,36 @@ const App: React.FC = () => {
 	};
 
 	return (
-		<div className='App' data-testid='app-component'>
-			{error && (
-				<div className='error-message'>
-					<h2>{error}</h2>
-				</div>
-			)}
-			<div className='main-container'>
-				<div className='info-container'>
-					<SearchComponent
-						searchTerm={searchTerm}
-						onChange={handleChange}
-						onClear={clearFunction}
-						results={results}
-					/>
-					<p className='loading-text'>{isLoading && 'Loading...'}</p>
+    <div className="App" data-testid="app-component">
+      {error && (
+        <div className="error-message">
+          <h2>{error}</h2>
+        </div>
+      )}
+      <div className="main-container">
+        <div className="info-container">
+          <SearchComponent
+            searchTerm={searchTerm}
+            onChange={handleChange}
+            onClear={clearFunction}
+            results={results}
+            testId={'search-input'}
+          />
+          <p className="loading-text" data-testid="loading">{isLoading && 'Loading...'}</p>
 
-					{forecast && results?.addressMatches.length > 0 && (
-						<DailyViewComponent weather={forecast[0]} />
-					)}
-				</div>
-				<div className='details-container'>
-					<DetailComponent forecast={forecast} isLoading={isLoading} />
-				</div>
-			</div>
-			<div className='footer'>
-				<p>This product was created by leonamquintao@gmail.com</p>
-			</div>
-		</div>
-	);
+          {forecast && results?.addressMatches.length > 0 && (
+            <DailyViewComponent weather={forecast[0]} />
+          )}
+        </div>
+        <div className="details-container">
+          <DetailComponent forecast={forecast} isLoading={isLoading} />
+        </div>
+      </div>
+      <div className="footer">
+        <p>This product was created by leonamquintao@gmail.com</p>
+      </div>
+    </div>
+  );
 };
 
 export default App;
