@@ -81,7 +81,7 @@ const DetailComponent: React.FC<DetailComponentProps> = ({ forecast, isLoading =
       {forecast.length === 0 ? (
         <p>Search the address to get the weather!</p>
       ) : (
-        <HorizontalScroll animValues={10} data-testid="horizontal-scroll">
+        <HorizontalScroll data-testid="horizontal-scroll">
           {forecast.slice(1).map((item, index) => {
             if (!item.isDaytime) return;
             return <ForecastItem item={item} index={index} key={index}/>;
