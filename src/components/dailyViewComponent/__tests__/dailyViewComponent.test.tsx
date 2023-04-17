@@ -3,9 +3,9 @@ import DailyViewComponent from '../';
 
 describe('Daily View Component', () => {
 
-  // beforeEach(() => {
-  //   jest.resetAllMocks();
-  // });
+  beforeEach(() => {
+    jest.resetAllMocks();
+  });
 
   const forecast = {
     number: 1,
@@ -45,6 +45,21 @@ describe('Daily View Component', () => {
     expect(appComponent).toBeInTheDocument();
   });
 
+  test('correctly renders weather information', () => {
+    const { getByTestId } = render(RenderComponent);
+
+    const weatherIcon = getByTestId('weather-img');
+    const tempF = getByTestId('weather-info-fahrenheit')
+    const tempC = getByTestId('weather-info-celsius')
+    const name = getByTestId('weather-name')
+    const detailedForecast = getByTestId('detailed-forecast')
+    const webIcon = getByTestId('web-icon')
+
+    expect(weatherIcon).toBeInTheDocument();
+    expect(tempF).toBeInTheDocument();
+    expect(tempC).toBeInTheDocument();
+    expect(name).toBeInTheDocument();
+    expect(detailedForecast).toBeInTheDocument();
+    expect(webIcon).toBeInTheDocument();
+  });
 });
-
-

@@ -34,32 +34,44 @@ const DailyViewComponent: React.FC<DailyViewComponentProps> = ({ weather }) => {
   }
 
   return (
-    <div className='daily-info' data-testid="daily-view">
-      <div className='weather-row'>
-        <div className='weather-icon-container'>
+    <div className="daily-info" data-testid="daily-view">
+      <div className="weather-row">
+        <div className="weather-icon-container">
           <img
-            className='weather-img'
+            className="weather-img"
             src={handleIconRender()}
-            alt='weather-img'
+            alt="weather-img"
+            data-testid="weather-img"
           />
         </div>
-        <div className='weather-info'>
-          <h2>
+        <div className="weather-info">
+          <h2 data-testid="weather-info-fahrenheit">
             {weather?.temperature} º{weather?.temperatureUnit}
           </h2>
 
-          <h5>{temperatureTransform(weather?.temperature)}</h5>
+          <h5 data-testid="weather-info-celsius">
+            {temperatureTransform(weather?.temperature)}
+          </h5>
         </div>
       </div>
 
-      <div className='info-details'>
-        <p className='weather-name'>{weather?.name}</p>
-        <p className='wind-speed'>wind Speed: {weather?.windSpeed}</p>
-        <p className='default-info'>{weather?.shortForecast}</p>
-        <p className='default-info'>{weather?.detailedForecast}</p>
+      <div className="info-details">
+        <p className="weather-name" data-testid="weather-name">
+          {weather?.name}
+        </p>
+        <p className="wind-speed">wind Speed: {weather?.windSpeed}</p>
+        <p className="default-info">{weather?.shortForecast}</p>
+        <p className="default-info" data-testid="detailed-forecast">
+          {weather?.detailedForecast}
+        </p>
 
-        <div className='web-icon-container'>
-          <img className='web-icon' src={weather?.icon} alt='web-icon' />
+        <div className="web-icon-container">
+          <img
+            className="web-icon"
+            data-testid="web-icon"
+            src={weather?.icon}
+            alt="web-icon"
+          />
         </div>
       </div>
     </div>
