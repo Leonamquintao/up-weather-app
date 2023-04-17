@@ -95,7 +95,6 @@ const App: React.FC = () => {
             onChange={handleChange}
             onClear={clearFunction}
             results={results}
-            testId={'search-input'}
           />
           <p className="loading-text" data-testid="loading">{isLoading && 'Loading...'}</p>
 

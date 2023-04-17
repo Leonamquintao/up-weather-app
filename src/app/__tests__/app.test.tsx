@@ -6,26 +6,6 @@ describe('App Component', () => {
 		jest.resetAllMocks();
 	});
 
-	const results = {
-    addressMatches: [
-      {
-        coordinates: {
-          x: -73.985506,
-          y: 40.748817,
-        },
-        geographies: [
-          {
-            adminFullName: 'New York, NY',
-            latLng: {
-              latitude: 40.748817,
-              longitude: -73.985506,
-            },
-          },
-        ],
-      },
-    ],
-  };
-
 	test('renders App component without crashes', () => {
 		const { getByTestId } = render(<App />);
 		const appComponent = getByTestId('app-component');
@@ -46,9 +26,9 @@ describe('App Component', () => {
     expect(searchComponent).toBeInTheDocument();
   });
 
-	test('shows loading text while isLoading state is true', () => {
+	test('shows loading text while isLoading state is true', async () => {
 		const { getByTestId } = render(<App />);
-		const loading = getByTestId('loading');
+		const loading = await getByTestId('loading');
 		expect(loading).toBeInTheDocument();
 	});
   
