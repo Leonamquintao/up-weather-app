@@ -3,9 +3,12 @@
   height: 100%;
 }
 
-.loading-text {
+.detail-loading-text {
   color: #747070;
   font-style: italic;
+  position: absolute;
+  z-index: 999;
+  top: 10px;
 }
 
 .weather-item {

@@ -31,7 +31,7 @@ const App: React.FC = () => {
 			if (searchTerm.length > 3) {
 				const result = await getLocation(searchTerm);
 				setResults(result.data.result);
-				await retrieveGridPoints();
+				if (result.data.result) await retrieveGridPoints();
 				setIsLoading(false);
 			}
 		} catch (e: any) {
@@ -98,7 +98,7 @@ const App: React.FC = () => {
           />
           <p className="loading-text" data-testid="loading">{isLoading && 'Loading...'}</p>
 
-          {forecast && results?.addressMatches.length > 0 && (
+          {forecast && results?.addressMatches.length > 0 && forecast[0] && (
             <DailyViewComponent weather={forecast[0]} />
           )}
         </div>

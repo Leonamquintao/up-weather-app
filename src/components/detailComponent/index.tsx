@@ -19,6 +19,7 @@ interface ForecastItemProps {
 }
 
 const DetailComponent: React.FC<DetailComponentProps> = ({ forecast, isLoading = false }) => {
+  console.log(JSON.stringify(forecast, null, 2));
   const temperatureTransform = (temperature: number) => {
     const celsius = ((temperature - 32) * 5) / 9;
     return `${Math.trunc(celsius)} ºC`;
@@ -77,7 +78,7 @@ const DetailComponent: React.FC<DetailComponentProps> = ({ forecast, isLoading =
   
   return (
     <div className="detail-container" data-testid="detail-component">
-      <p className="loading-text" data-testid="detail-loading">{isLoading && 'Loading...'}</p>
+      <p className="detail-loading-text" data-testid="detail-loading">{isLoading && 'Loading...'}</p>
       {forecast.length === 0 ? (
         <p>Search the address to get the weather!</p>
       ) : (
