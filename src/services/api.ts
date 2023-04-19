@@ -31,8 +31,8 @@ export const getGridPointsByLatAndLong = async (lat: number, long: number) => {
 
 export const getForecast = async (gridX: number, gridY: number) => {
   const OFFICE = 'TOP';
-  const URL = `/gridpoints/${OFFICE}/${gridX},${gridY}/forecast`;
   // const URL = '/gridpoints/TOP/31,80/forecast';
+  const URL = `/gridpoints/${OFFICE}/${gridX},${gridY}/forecast`;
   const response = await weatherClient.get(URL);
   return response;
 };

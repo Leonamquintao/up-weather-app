@@ -19,7 +19,6 @@ interface ForecastItemProps {
 }
 
 const DetailComponent: React.FC<DetailComponentProps> = ({ forecast, isLoading = false }) => {
-  console.log(JSON.stringify(forecast, null, 2));
   const temperatureTransform = (temperature: number) => {
     const celsius = ((temperature - 32) * 5) / 9;
     return `${Math.trunc(celsius)} ºC`;
